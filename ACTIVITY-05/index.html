@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 05 - IPL Ticket Booking</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            background: white;
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #222;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: #222;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        button:hover {
+            background: #444;
+        }
+
+        #booking {
+            margin: 180px auto 40px;
+            background: white;
+            max-width: 500px;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        input, select {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        #toast {
+            visibility: hidden;
+            background: #222;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+
+        #toast.show {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>IPL 2026 Ticket Booking</h1>
+        <p>Experience the excitement of live cricket!</p>
+
+        <button onclick="bookTicket()">Book Ticket</button>
+    </div>
+
+    <div id="booking">
+        <h2>Book Your Tickets</h2>
+        <p>Enter your details to book your match tickets.</p>
+
+        <form onsubmit="confirmBooking(event)">
+
+            <input type="text" id="name"
+                placeholder="Enter your name" required>
+
+            <input type="email" id="email"
+                placeholder="Enter your email" required>
+
+            <select id="match" required>
+                <option value="">Select Match</option>
+                <option value="RCB vs CSK">RCB vs CSK</option>
+                <option value="MI vs KKR">MI vs KKR</option>
+                <option value="RCB vs MI">RCB vs MI</option>
+            </select>
+
+            <select id="tickets" required>
+                <option value="">Select Number of Tickets</option>
+                <option value="1">1 Ticket</option>
+                <option value="2">2 Tickets</option>
+                <option value="3">3 Tickets</option>
+                <option value="4">4 Tickets</option>
+            </select>
+
+            <br><br>
+
+            <button type="submit">Confirm Booking</button>
+
+        </form>
+    </div>
+
+    <div id="toast"></div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
