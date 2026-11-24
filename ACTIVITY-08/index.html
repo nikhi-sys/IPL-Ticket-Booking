@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL 2026 - Responsive Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">IPL 2026</h2>
+
+            <button class="menu-toggle" id="menuToggle">☰</button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#matches">Matches</a></li>
+                <li><a href="#guidelines">Guidelines</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Experience The Stadium Energy Live!</h1>
+        <p>Get ready for the excitement of IPL 2026.</p>
+    </section>
+
+    <main>
+        <section id="matches">
+            <h2>Match Schedule</h2>
+
+            <div class="controls">
+                <select id="teamFilter">
+                    <option value="all">All Teams</option>
+                    <option value="CSK">CSK</option>
+                    <option value="MI">MI</option>
+                    <option value="RCB">RCB</option>
+                    <option value="KKR">KKR</option>
+                </select>
+
+                <button id="gridBtn">Grid View</button>
+                <button id="listBtn">List View</button>
+            </div>
+
+            <div class="match-container" id="matchContainer">
+                <div class="match-card" data-teams="CSK MI">
+                    <h3>CSK vs MI</h3>
+                    <p>Date: 10 April 2026</p>
+                    <p>Venue: Chennai</p>
+                </div>
+
+                <div class="match-card" data-teams="RCB KKR">
+                    <h3>RCB vs KKR</h3>
+                    <p>Date: 12 April 2026</p>
+                    <p>Venue: Bengaluru</p>
+                </div>
+
+                <div class="match-card" data-teams="MI RCB">
+                    <h3>MI vs RCB</h3>
+                    <p>Date: 15 April 2026</p>
+                    <p>Venue: Mumbai</p>
+                </div>
+
+                <div class="match-card" data-teams="CSK KKR">
+                    <h3>CSK vs KKR</h3>
+                    <p>Date: 18 April 2026</p>
+                    <p>Venue: Chennai</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="guidelines">
+            <h2>Stadium Guidelines</h2>
+
+            <div class="guideline-container">
+                <div class="guideline-card">
+                    <h3>Entry Rules</h3>
+                    <p>Carry your valid match ticket for entry.</p>
+                </div>
+
+                <div class="guideline-card">
+                    <h3>Security</h3>
+                    <p>Follow stadium security instructions.</p>
+                </div>
+
+                <div class="guideline-card">
+                    <h3>Cleanliness</h3>
+                    <p>Keep the stadium clean and use dustbins.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 IPL Ticket Booking</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #172554;
+    color: white;
+    padding: 18px 30px;
+}
+
+.logo {
+    color: #facc15;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Hero section */
+.hero {
+    background-color: #1e40af;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    margin-bottom: 15px;
+}
+
+/* Main content */
+main {
+    padding: 30px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Controls */
+.controls {
+    margin-bottom: 20px;
+}
+
+.controls select,
+.controls button {
+    padding: 10px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+/* Match cards using CSS Grid */
+.match-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.match-card,
+.guideline-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px #ccc;
+}
+
+.match-card h3,
+.guideline-card h3 {
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+.match-card p,
+.guideline-card p {
+    margin: 8px 0;
+}
+
+/* List view */
+.match-container.list-view {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Guidelines using CSS Grid */
+.guideline-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+/* Tablet layout */
+@media (max-width: 768px) {
+    .match-container {
+        grid-template-columns: 1fr;
+    }
+
+    .guideline-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    main {
+        padding: 18px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .match-container {
+        grid-template-columns: 1fr;
+    }
+
+    .guideline-container {
+        grid-template-columns: 1fr;
+    }
+
+    .controls button,
+    .controls select {
+        margin-bottom: 8px;
+    }
+}
